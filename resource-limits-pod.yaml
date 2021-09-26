@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: newpod
+spec:
+  containers:
+  - name: new-web-con
+    image: submar1n3/webimage:v6
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: 0.5
+      limits:
+        memory: "1Gi"
+        cpu: 1
