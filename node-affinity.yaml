@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynewpod
+spec:
+  containers:
+  - name: web-container
+    image: submar1n3/webimage:v6
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: env
+            operator: In
+            values:
+            - test
