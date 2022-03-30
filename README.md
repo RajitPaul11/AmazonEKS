@@ -1,1 +1,6 @@
-Kubernetes Manifests for implementation on Kubernetes Control Plane, in this scenario we shall be using Amazon Elastic Kubernetes Service.
+<ol>
+  <li>Amazon EKS Setup </li>
+  <li>EKSCTL Config </li>
+  <li>K8S Manifests </li>
+  <li>Amazon EKS Authnetication & Authorization</li>
+</ol>
