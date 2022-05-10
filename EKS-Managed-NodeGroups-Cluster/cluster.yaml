@@ -9,9 +9,9 @@ metadata:
 vpc:
   subnets:
     public:
-      ap-south-1a: { id: subnet-01fcc669 }
-      ap-south-1b: { id: subnet-8c1972c0 }
-      ap-south-1c: { id: subnet-4ff24f34 }
+      ap-south-1a: { id: your-subnet-id }
+      ap-south-1b: { id: your-subnet-id }
+      ap-south-1c: { id: your-subnet-id }
 
 managedNodeGroups:
   - name: dev-ng-1
@@ -32,11 +32,15 @@ managedNodeGroups:
       - ap-south-1c
     labels: {role: dev}
     ssh:
-      publicKeyName: DevopsDiscussion
+      publicKeyName: Your-EC2-Key-Pair-Name
     tags:
       Env: Dev
     iam:
       attachPolicyARNs:
         - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
       withAddonPolicies:
         autoScaler: true
