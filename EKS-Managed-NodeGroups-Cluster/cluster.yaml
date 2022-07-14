@@ -9,10 +9,12 @@ metadata:
 vpc:
   subnets:
     public:
-      ap-south-1a: { id: your-subnet-id }
-      ap-south-1b: { id: your-subnet-id }
-      ap-south-1c: { id: your-subnet-id }
-
+      pub-ap-south-1a: 
+        id: "xxxxxxxx"
+      pub-ap-south-1b: 
+        id: "xxxxxxxx"
+      pub-ap-south-1c: 
+        id: "xxxxxxxx"
 managedNodeGroups:
   - name: dev-ng-1
     ami: ami-015fd6563bf7915c6
@@ -27,9 +29,9 @@ managedNodeGroups:
     volumeEncrypted: true
     volumeType: gp3
     subnets:
-      - ap-south-1a
-      - ap-south-1b
-      - ap-south-1c
+      - pub-ap-south-1a
+      - pub-ap-south-1b
+      - pub-ap-south-1c
     labels: {role: dev}
     ssh:
       publicKeyName: Your-EC2-Key-Pair-Name
