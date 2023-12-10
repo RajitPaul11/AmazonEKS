@@ -17,6 +17,7 @@ vpc:
         id: "xxxxxxxx"
 managedNodeGroups:
   - name: dev-ng-1
+    amiFamily: AmazonLinux2
     ami: ami-015fd6563bf7915c6
     overrideBootstrapCommand: |
       #!/bin/bash
